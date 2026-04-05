@@ -1,23 +1,4 @@
-"""
-noise_injection.py
-------------------
-Gaussian noise injection defense on energy readings.
 
-Adds proportional noise to the energy measurement channel to
-obscure membership-correlated fingerprints.
-
-Paper finding (Table 4):
-    Noise injection only approaches suppression at rho=30% (57.4%
-    attack accuracy), a level that seriously impairs legitimate power
-    monitoring SNR and makes it impractical for deployment.
-    Below rho=30%, our K-probe averaging recovers the signal.
-
-Equation 11 from the paper:
-    e_hat(t) = e(t) + N(0, (rho * e_bar)^2)
-
-Configs tested:
-    rho in {0.05, 0.10, 0.20, 0.30}
-"""
 
 import numpy as np
 from typing import List, Dict, Tuple, Optional
