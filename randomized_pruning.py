@@ -1,23 +1,3 @@
-"""
-randomized_pruning.py
----------------------
-Randomized pruning mask defense against energy side-channel MIA.
-
-Flips a fraction phi of pruning decisions per inference call,
-preventing the attacker from correlating sparse activation patterns
-with training membership.
-
-Paper finding (Table 4):
-    Randomized pruning masks reduce attack accuracy from 86.7% to
-    68.4% at only 2.3% utility cost -- the single most effective
-    defense tested in the paper.
-
-Key insight:
-    Static pruning masks create consistent sparse activation patterns
-    for training members (lower energy). Randomizing a fraction of
-    mask decisions per query breaks this consistency without
-    retraining the model.
-"""
 
 import torch
 import torch.nn as nn
