@@ -1,21 +1,3 @@
-"""
-dp_sgd.py
----------
-Differentially Private SGD defense (Abadi et al., 2016).
-
-Clips per-sample gradients and adds calibrated Gaussian noise
-during fine-tuning. Protects training-time gradients but leaves
-inference-time execution paths unchanged.
-
-Paper finding (Table 4):
-    DP-SGD reduces attack accuracy by at most 4.6 percentage points
-    even at epsilon=1, with 7.5% utility cost. This confirms that
-    perturbing training-time gradients does not randomize inference-time
-    execution path decisions.
-
-Configs tested in the paper:
-    epsilon in {1, 3, 5}, delta=1e-5, clipping norm C=1.0
-"""
 
 import torch
 import torch.nn as nn
