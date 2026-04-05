@@ -1,12 +1,3 @@
-"""
-trigger_design.py
------------------
-Crafts poisoned samples that modify execution paths while preserving
-model outputs. Triggers are designed on the publicly available base
-checkpoint with no access to victim model parameters.
-
-Based on the threat model in Section 3 of the paper.
-"""
 
 import torch
 import torch.nn as nn
